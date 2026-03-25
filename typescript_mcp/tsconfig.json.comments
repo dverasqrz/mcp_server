@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // Specifies which ECMAScript version to compile to (like Python version)
+    "target": "ES2022",
+    // Defines the module system to use (like Python's import system)
+    "module": "Node16",
+    // Lists the runtime libraries to include (like Python's standard library)
+    "lib": [
+      "ES2022"
+    ],
+    // Output directory for compiled files (like Python's __pycache__ but for the whole project)
+    "outDir": "./dist",
+    // Source code root directory
+    "rootDir": "./src",
+    // Enables strict type checking (like running mypy --strict)
+    "strict": true,
+    // Makes different module systems work together seamlessly
+    "esModuleInterop": true,
+    // Skips type checking of declaration files for better build performance
+    "skipLibCheck": true,
+    // Ensures consistent file naming across different operating systems
+    "forceConsistentCasingInFileNames": true,
+    // Specifies how to resolve module imports (like Python's sys.path resolution)
+    "moduleResolution": "node16"
+  },
+  // Include all files under src/ (like recursive globbing in Python's pathlib)
+  "include": [
+    "src/**/*"
+  ],
+  // Skip external packages (like Python's site-packages) and compiled output
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

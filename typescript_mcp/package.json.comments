@@ -1,0 +1,55 @@
+{
+  // The package name in npm's registry (like Python package name in PyPI)
+  // The @username/ prefix is for scoped packages (like Python's namespace packages)
+  "name": "zoltanctoth-binancemcp",
+  // Semantic version (same concept as Python's version in setup.py)
+  // This version is now imported in binance_mcp.ts
+  "version": "1.1.5",
+  // Package description (like Python's package description in setup.py)
+  "description": "A simple MCP server demo",
+  // The main entry point when this package is imported (like Python's __init__.py)
+  "main": "dist/binance_mcp.js",
+  // Makes the package executable from command line (like Python's console_scripts)
+  // When installed globally, creates a command 'binancemcp-ts'
+  "bin": "dist/binance_mcp.js",
+  // Configuration for npm package registry (similar to PyPI configuration)
+  // Using GitHub's package registry instead of the public npm registry
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  // NPM scripts (similar to Makefile targets or Python's setup.py commands)
+  // Run these with: npm run <script-name>
+  "scripts": {
+    // Compiles TypeScript to JavaScript (like compiling Cython or similar)
+    "build": "tsc",
+    // Automatically runs build before package is installed
+    "prepare": "npm run build"
+  },
+  // Package tags/categories (like PyPI classifiers)
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol"
+  ],
+  // Package metadata (similar to setup.py author and license fields)
+  "author": "Nordquant",
+  "license": "MIT",
+  // Development dependencies (like Python's setup.py install_requires)
+  // These are not included when someone installs your package
+  "devDependencies": {
+    // TypeScript type definitions for Node.js (no Python equivalent - Python has built-in types)
+    "@types/node": "^20.0.0",
+    // The TypeScript compiler (like having the Python interpreter itself)
+    "typescript": "^5.0.0"
+  },
+  // Runtime dependencies (like Python's requirements.txt or setup.py install_requires)
+  "dependencies": {
+    // The MCP SDK package
+    "@modelcontextprotocol/sdk": "^1.11.2",
+    // Runtime type checking library (similar to Python's typing module + runtime checks)
+    "zod": "^3.22.0"
+  },
+  // Node.js version requirements (like Python's python_requires in setup.py)
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

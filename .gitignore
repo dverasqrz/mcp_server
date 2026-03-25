@@ -1,0 +1,20 @@
+.env
+*.env
+.env.*
+activity.log
+__pycache__
+/.cursor/*
+.env.mine
+node_modules
+*.tgz
+typescript_mcp/dist/
+typescript_mcp/node_modules/
+
+# Courseware dev
+/dev
+/.archive
+!.github/
+
+.claude/
+
+start_binance_mcp.cmd

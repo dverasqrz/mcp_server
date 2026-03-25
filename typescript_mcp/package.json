@@ -1,0 +1,28 @@
+{
+  "name": "zoltanctoth-course-binancemcp",
+  "version": "1.0.0",
+  "description": "MCP server that provides Binance price data",
+  "main": "dist/binance_mcp.js",
+  "bin": "dist/binance_mcp.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol"
+  ],
+  "author": "Nordquant",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.2",
+    "zod": "^3.22.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
